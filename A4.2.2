@@ -1,0 +1,62 @@
+ //calls the FORM from the html
+    const form = document.getElementById('form').value;
+    
+
+      function verifyUser() { 
+    //calls user input from the FIRST name section of the FORM and assigns it to 'first' variable 
+        let first = document.forms['form']['first'].value;
+    //calls user input from the LAST name section of the FORM and assigns it to 'first'  variable
+        let last = document.forms['form']['last'].value;
+    //calls user input from the FIRST & LAST variables, adds them plus a space, and assigns the result to 'validName' variable
+        let validName = (first + ' ' + last);
+    //takes the VALIDNAME variable and evaluates the string length with a loop function
+        let validateName = i=0; validName.length <= 20; i++;
+    //calls user input from the ZIP section of the FORM and assigns it to 'zip' variable
+        let zip = document.forms['form']['zip'].value;
+    //takes the ZIP variable and evaluates the string length with a loop function
+    let validZip = i=0; zip.length <= 5; i++;
+
+    //if the data field 'first' is empty, an alert message pops up
+        if (first === "") {
+            alert ("First Name is Required"); 
+            return false; 
+        }
+    //if the data field 'last' is empty, an alert message pops up
+        if (last === "") {
+            alert ("Last Name is Required"); 
+            return false; 
+        }
+    //if the validateName string is greater than 20 characters, an alert message pops up
+        if (validateName > 20) {
+            alert ("Invalid Name");
+            return false;
+        }
+    //if the data field 'zip' is empty, an alert message pops up
+        if (zip === "") {
+            alert ("Zip Required");
+            return false;
+        }
+    //if the user input for 'zip' is not a number, an alert message pops up
+        if (isNaN(zip)) {
+            alert ("Invalid Zipcode");
+            return false;
+        }
+    
+    
+    //The 'zip' string is SUPPOSED to == 5 digits or an alert message pops up
+    //Everything else is working but no matter how i format this 'if' section, it displays the message regardless of 
+    //string length. The NaN and "" work just fine so this part has been /*commented*/
+
+    /*if (validZip !== 4) {
+            alert ("Broken Zip Code");
+            return false;
+        }*/
+
+
+    //the message to be displayed if all entries are valid (with exception as stated above)
+        alert ("The female Suriname toad incubates her eggs within the skin on her back. Once mature, the baby toads emerge from holes in her skin. SEE ALSO: Trypophobia");
+
+    }
+
+    
+   
